@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temi Afeye - Resume</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #1a252f;
+            --secondary-color: #2c3e50;
+            --accent-color: #2980b9;
+            --text-color: #222;
+            --light-text: #555;
+            --bg-color: #fff;
+        }
+
+        @page {
+            size: A4;
+            margin: 12mm 15mm; /* Slightly relaxed margins */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.45; /* Increased line height for readability */
+            color: var(--text-color);
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            font-size: 9.5pt; /* Slightly larger font */
+            -webkit-print-color-adjust: exact;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .print-instructions {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            max-width: 210mm;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 10pt;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: white;
+            padding: 15mm 20mm; /* More internal padding */
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 20px; /* More space after header */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            font-size: 22pt;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .header-left .subtitle {
+            font-size: 11.5pt;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-top: 6px;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 9.5pt;
+            color: var(--light-text);
+        }
+
+        section {
+            margin-bottom: 20px; /* More space between sections */
+        }
+
+        h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+
+        .job {
+            margin-bottom: 18px; /* More space between jobs */
+            page-break-inside: avoid;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 10pt;
+            color: var(--secondary-color);
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .date {
+            font-style: italic;
+            color: var(--light-text);
+            font-size: 9pt;
+            white-space: nowrap;
+        }
+
+        ul {
+            margin: 4px 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 4px; /* More space between bullets */
+            text-align: justify;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 6px;
+            padding-left: 0;
+        }
+
+        strong {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        @media print {
+            @page {
+                margin: 0;
+            }
+            body {
+                background-color: white;
+                margin: 0;
+                padding: 0;
+                display: block;
+            }
+            .print-instructions {
+                display: none !important;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                box-shadow: none;
+                padding: 15mm 20mm;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-instructions">
+        <strong>⚠️ IMPORTANT PRINT SETTINGS:</strong><br>
+        1. Press <strong>Cmd + P</strong> (or Ctrl + P).<br>
+        2. Set Destination to <strong>"Save as PDF"</strong>.<br>
+        3. Click <strong>"More settings"</strong>.<br>
+        4. <strong>UNCHECK "Headers and footers"</strong>.<br>
+        5. Ensure "Background graphics" is checked.
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Temi Afeye</h1>
+                <div class="subtitle">Technical Lead / Senior AI Scientist</div>
+            </div>
+            <div class="header-right">
+                <div>United Kingdom</div>
+            </div>
+        </header>
+
+        <section>
+            <h2>Profile Statement</h2>
+            <p>With over 9+ years of experience leading end-to-end data and AI initiatives, I am a Technical Lead and Senior AI Scientist specializing in Generative AI, Graph Machine Learning, and Agentic Systems. I have a proven track record in the financial services and consulting sectors, driving digital transformation through the deployment of scalable AI solutions. My expertise spans Large Language Models (LLMs), Graph RAG, cloud-based engineering (GCP/Azure), and causal inference. I excel at bridging the gap between technical innovation and strategic business goals, managing high-performing teams, and engaging with C-suite stakeholders to deliver high-impact results.</p>
+        </section>
+
+        <section>
+            <h2>Full-Time Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Technical Lead / Senior AI Scientist</span> <span class="company"> | Lloyds Banking Group</span>
+                    </div>
+                    <span class="date">Bristol, UK | 2023 - Present</span>
+                </div>
+                <ul>
+                    <li><strong>Graph AI & Agentic Systems:</strong> Architecting and building the Graph AI conversation layer, integrating Graph RAG and Graph ML workloads to enhance context-aware interactions. Developing Agentic AI systems on top of the Graph AI layer to orchestrate complex banking workflows.</li>
+                    <li><strong>Generative AI Leadership:</strong> Leads conceptualization and development of Generative AI solutions in the everyday banking division using GCP's Vertex AI and Gemini models to automate data analysis, delivering actionable insights as part of the bank’s Platform 3.0 strategy.</li>
+                    <li><strong>Operational Efficiency:</strong> Co-Led high-impact data science projects that drove an estimated 15% increase in operational efficiency, one of which has a target cost savings of approximately £10M+ annually for the savings and current account teams.</li>
+                    <li><strong>Team Leadership:</strong> Leads a team of data scientists, machine learning engineers, and AI researchers in executing division-wide projects, ensuring alignment with organizational objectives and maintaining best practices in model development.</li>
+                    <li><strong>Stakeholder Management:</strong> Drives collaboration with C-suite stakeholders and division heads to translate business challenges into technical requirements and actionable analytical solutions through feedback and governance pipelines.</li>
+                    <li><strong>Model Governance:</strong> Implemented robust model monitoring and recalibration processes to ensure sustained performance and reliability of productionized models (Customer Vulnerability & Strategic Pricing & Planning Models).</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Senior Data Scientist</span> <span class="company"> | M-Kopa</span>
+                    </div>
+                    <span class="date">United Kingdom | 2021 - 2022</span>
+                </div>
+                <ul>
+                    <li>Built an in-house credit risk modeling library within 3 months, now a cornerstone tool for organization-wide risk assessment.</li>
+                    <li>Developed a credit risk model supporting over one million customers across Sub-Saharan Africa, improving decision-making accuracy.</li>
+                    <li>Worked with stakeholders to deploy scalable, reproducible predictive models and communicated insights to promote data-driven strategies.</li>
+                    <li>Mentored data scientists and analysts, cultivating a culture of innovation and skill growth.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Manager, Decision Science</span> <span class="company"> | Renmoney</span>
+                    </div>
+                    <span class="date">Nigeria | 2020 - 2021</span>
+                </div>
+                <ul>
+                    <li>Led a 16-person decision science team in technical projects, team development, and execution of business goals from a data science perspective, directly reporting to the Chief Risk Officer.</li>
+                    <li>Delivered a customer affordability model, reducing credit risk losses by 20%.</li>
+                    <li>Delivered a collections prioritization model, increasing debt recovery by over 60% across 16 states in Nigeria.</li>
+                    <li>Developed technical use cases for senior management to invest in state-of-the-art machine learning tools which accelerated the data maturity of the organization.</li>
+                    <li>Demonstrated exceptional professional growth by receiving two promotions within a single business cycle, becoming the youngest team manager in the company.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Data Scientist/Consultant</span> <span class="company"> | Deloitte Nigeria</span>
+                    </div>
+                    <span class="date">2018 - 2020</span>
+                </div>
+                <ul>
+                    <li>Architected machine learning solution designs, POCs, and other use cases for clients in financial services and international agencies.</li>
+                    <li>Engineered machine learning solutions, including NLP/OCR pipelines, boosting document processing efficiency by 30% for financial clients.</li>
+                    <li>Guided a team of six in deploying end-to-end machine learning model training and serving pipelines for two major Nigerian banks, strengthening their analytics capabilities.</li>
+                    <li>Contributed to Robotic Process Automation (RPA) solutions for a top payments firm, optimizing operational workflows.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Machine Learning Engineer</span> <span class="company"> | African Centre of Excellence</span>
+                    </div>
+                    <span class="date">Nigeria | 2016 - 2018</span>
+                </div>
+                <ul>
+                    <li>Directed the development of ML features for two mobile apps, improving user engagement and functionality.</li>
+                    <li>Served as senior developer on X-Insights, a data-driven platform recognized as a top-ten startup solution by Stanbic IBTC Bank.</li>
+                    <li>Designed and validated schematic designs with hardware engineers for seamless integration.</li>
+                    <li>Mentored interns and junior engineers, building a collaborative and innovative team.</li>
+                </ul>
+            </div>
+            
+             <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Data Analyst Intern</span> <span class="company"> | Accenture</span>
+                    </div>
+                    <span class="date">Nigeria | 2014</span>
+                </div>
+                <ul>
+                    <li>Developed churn, forecasting, and clustering models using Power BI and Tableau, providing actionable client insights.</li>
+                    <li>Wrote SQL stored procedures and ETL processes for data analytics projects, ensuring data accuracy.</li>
+                    <li>Contributed research-based writing on emerging technologies, supporting thought leadership efforts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Part-Time & Contract Experience</h2>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Author, Deep Learning Nanodegree (Generative AI)</span> <span class="company"> | Udacity</span>
+                    </div>
+                    <span class="date">Remote | Oct 2025 - Present</span>
+                </div>
+                <ul>
+                    <li><strong>Curriculum Development:</strong> Authoring comprehensive curriculum and hands-on projects for the Deep Learning Nanodegree, specifically focusing on Generative AI, LLMs, and modern deep learning techniques.</li>
+                    <li><strong>Educational Impact:</strong> Designing educational content to upskill learners in cutting-edge AI technologies, ensuring alignment with industry standards and best practices.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Data Solution Architect/Machine Learning Expert</span> <span class="company"> | Tracasa Global</span>
+                    </div>
+                    <span class="date">Spain | 2022 - 2023</span>
+                </div>
+                <ul>
+                    <li>Worked on the integration of the air quality index data pipeline into a data lakehouse platform (Dremio).</li>
+                    <li>Built a knowledge graph in conjunction with geospatial entities to track entities' uptime, usage, and downtime on the ArcGIS Platform.</li>
+                    <li>Effectively analyzed time series data to develop air quality index forecasts.</li>
+                    <li>Delivered project presentations to industry leaders such as the technical officer at the European Environmental Agency in Copenhagen and other vital stakeholders.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Senior Data Science Consultant</span> <span class="company"> | Edina Geoservices (University of Edinburgh)</span>
+                    </div>
+                    <span class="date">United Kingdom | 2022</span>
+                </div>
+                <ul>
+                    <li>Consulted and built proof of concept (POC) scenarios for the data science platform development team.</li>
+                    <li>Collaborated with the engineering team to test and enhance the functionalities of the internally developed data science platform.</li>
+                    <li>Engaged in multiple presentations and discussions with the University project leadership team to evaluate the practicality and potential of the platform.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">PhD, Computer Science</span> <span class="company"> | University of Bath</span>
+                    </div>
+                    <span class="date">In View | 2024 - Present</span>
+                </div>
+                <ul>
+                    <li><strong>Focus:</strong> Reinforcement Learning from Human Feedback (RLHF) for Large Language Models in Financial Applications.</li>
+                    <li><strong>Thesis:</strong> "Optimizing Large Language Models for Financial Decision-Making through Reinforcement Learning from Human Feedback".</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Masters of Science, Computer Science</span> <span class="company"> | Swansea University</span>
+                    </div>
+                    <span class="date">UK | 2022 - 2023</span>
+                </div>
+                <ul>
+                    <li><strong>Distinction:</strong> Graduated with Distinction.</li>
+                    <li><strong>Thesis:</strong> "Computer Art with Generative Adversarial Networks (GANs)".</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Bachelor of Science, Economics</span> <span class="company"> | Obafemi Awolowo University</span>
+                    </div>
+                    <span class="date">Nigeria | 2009 - 2016</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Training & Certifications</h2>
+            <ul class="skills-list">
+                <li><strong>Generative AI with Large Language Models (LLMs)</strong>, Coursera (2025) - Mastered transformer architectures, fine-tuning, and prompt engineering.</li>
+                <li><strong>Professional Machine Learning Engineer</strong>, Google Cloud (2024) - Designing and productionizing ML models on GCP.</li>
+                <li><strong>Nanodegree, AWS Machine Learning Engineering</strong>, Udacity (2021)</li>
+                <li><strong>Leadership and Business</strong>, Deloitte Leaders Academy (2020)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Technical Skills:</strong> Generative AI (LLMs, RLHF, Fine-tuning), Graph AI, Graph RAG, Agentic AI, Machine Learning, Deep Learning, Causal Inference, NLP, Computer Vision.</li>
+                <li><strong>Tools & Languages:</strong> Python, SQL, Java, Git, GCP (Vertex AI, Gemini), Azure, Docker, Kubernetes.</li>
+                <li><strong>Leadership:</strong> Team Management, Technical Leadership, Stakeholder Engagement, Strategic Planning, Risk Analysis, Agile/Scrum.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Publications and Articles</h2>
+            <ul class="skills-list">
+                <li><strong>Afeye, T. (2024). "A Causal Approach to Decreasing Bank Defaults."</strong> Substack. Utilized causal machine learning techniques to analyze and mitigate bank customer turnover.</li>
+                <li><strong>Afeye, T. (2019). "Using TensorBoard Callbacks to Monitor Deep Learning Models During Training."</strong> Medium. Strategies for monitoring training processes using Keras callbacks.</li>
+                <li><strong>Afeye, T. (2021). "MLOps for Data Science: Some Best Practices."</strong> Medium. Integration of DevOps practices within data science.</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
