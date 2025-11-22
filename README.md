@@ -25,7 +25,7 @@ This is a premium, responsive personal portfolio website built with HTML, CSS, a
     *   Click **Save**.
 
 4.  **View Your Site**:
-    *   Your site will be live at `https://YOUR_USERNAME.github.io/REPO_NAME/`.
+    *   Your site is live at: **[https://temiafeye.github.io/my-portfolio/](https://temiafeye.github.io/my-portfolio/)**
 
 ## Features
 *   **Premium Design**: Dark theme with glassmorphism and gradient accents.
