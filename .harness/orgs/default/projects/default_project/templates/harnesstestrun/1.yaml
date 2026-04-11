@@ -1,0 +1,38 @@
+template:
+  name: harness-test-run
+  type: Stage
+  projectIdentifier: default_project
+  orgIdentifier: default
+  spec:
+    type: CI
+    spec:
+      cloneCodebase: true
+      caching:
+        enabled: true
+        override: true
+      buildIntelligence:
+        enabled: true
+      platform:
+        os: Linux
+        arch: Arm64
+      runtime:
+        type: Cloud
+        spec:
+          imageSpec:
+            imageName: ubuntu-latest
+      execution:
+        steps:
+          - step:
+              type: GitClone
+              name: GitClone_1
+              identifier: GitClone_1
+              spec:
+                connectorRef: mytestapp
+                repoName: my-portfolio
+                build:
+                  type: branch
+                  spec:
+                    branch: main
+              description: harness test
+  identifier: harnesstestrun
+  versionLabel: "1"
