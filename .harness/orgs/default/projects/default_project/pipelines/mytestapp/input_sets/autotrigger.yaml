@@ -1,0 +1,14 @@
+inputSet:
+  name: autotrigger
+  identifier: autotrigger
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: mytestapp
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>

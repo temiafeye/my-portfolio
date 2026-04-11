@@ -1,0 +1,21 @@
+pipeline:
+  name: my-test-app
+  identifier: mytestapp
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: mybuild
+        identifier: mybuild
+        template:
+          templateRef: harnesstestrun
+          versionLabel: "1"
+          gitBranch: main
+  properties:
+    ci:
+      codebase:
+        connectorRef: mytestapp
+        repoName: my-portfolio
+        build: <+input>
+        sparseCheckout: []

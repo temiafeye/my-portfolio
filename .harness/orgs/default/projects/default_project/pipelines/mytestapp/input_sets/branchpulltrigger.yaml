@@ -1,0 +1,14 @@
+inputSet:
+  name: branch-pull-trigger
+  identifier: branchpulltrigger
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: mytestapp
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
